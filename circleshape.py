@@ -25,5 +25,4 @@ class CircleShape(pygame.sprite.Sprite):
     def checkCollision(self, shape):
         combined_radius = self.radius + shape.radius
         if self.position.distance_to(shape.position) < combined_radius:
-            print("Game over!")
-            sys.exit()
+            return True
